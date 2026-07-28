@@ -18,6 +18,15 @@ export const credentials: Credential[] = [
     category: "language",
     status: "valid",
   },
+  {
+  id: "LLD-AI-2026-0002",
+  learnerName: "Amina Mohamed",
+  program: "Applied AI Foundations",
+  credentialType: "Certificate of Completion",
+  dateIssued: "July 26, 2026",
+  category: "ai",
+  status: "valid",
+},
 ];
 
 export function getCredentialById(id: string) {
