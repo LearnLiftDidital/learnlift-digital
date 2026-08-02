@@ -32,6 +32,12 @@ export const metadata: Metadata = {
   authors: [{ name: "LearnLift Digital" }],
   creator: "LearnLift Digital",
   publisher: "LearnLift Digital",
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
