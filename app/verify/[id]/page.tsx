@@ -199,6 +199,50 @@ export default async function VerifyPage({
         }}
       >
         <Brand />
+        <div
+  style={{
+    marginTop: "35px",
+    marginBottom: "35px",
+    padding: "22px",
+    borderRadius: "14px",
+    background: "#ecfdf3",
+    border: "1px solid #86efac",
+    textAlign: "center",
+  }}
+>
+  <div
+    style={{
+      fontSize: "15px",
+      color: "#15803d",
+      fontWeight: 700,
+      letterSpacing: "1px",
+      textTransform: "uppercase",
+    }}
+  >
+    ✓ VERIFIED CREDENTIAL
+  </div>
+
+  <div
+    style={{
+      marginTop: "8px",
+      fontSize: "28px",
+      fontWeight: 800,
+      color: "#0f172a",
+    }}
+  >
+    VALID
+  </div>
+
+  <div
+    style={{
+      marginTop: "10px",
+      color: "#64748b",
+      fontSize: "15px",
+    }}
+  >
+    Issued by LearnLift Digital
+  </div>
+</div>
 
         <div
           style={{
@@ -226,7 +270,7 @@ export default async function VerifyPage({
             marginBottom: "10px",
           }}
         >
-          Credential Verified
+          Official Credential Verification
         </h1>
 
         <p
@@ -238,10 +282,107 @@ export default async function VerifyPage({
             marginBottom: "40px",
           }}
         >
-          This credential is recorded as valid in the LearnLift Digital
-          credential verification system.
+          Verify the authenticity and status of this LearnLift Digital credential.
         </p>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "16px",
+    marginBottom: "35px",
+  }}
+>
+  <div
+    style={{
+      background: "#f8fafc",
+      border: "1px solid #e2e8f0",
+      borderRadius: "12px",
+      padding: "18px",
+      textAlign: "center",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "12px",
+        color: "#64748b",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+      }}
+    >
+      Status
+    </div>
 
+    <div
+      style={{
+        marginTop: "8px",
+        fontWeight: 700,
+        color: "#16a34a",
+      }}
+    >
+      Valid
+    </div>
+  </div>
+
+  <div
+    style={{
+      background: "#f8fafc",
+      border: "1px solid #e2e8f0",
+      borderRadius: "12px",
+      padding: "18px",
+      textAlign: "center",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "12px",
+        color: "#64748b",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+      }}
+    >
+      Issued
+    </div>
+
+    <div
+      style={{
+        marginTop: "8px",
+        fontWeight: 700,
+      }}
+    >
+      {credential.dateIssued}
+    </div>
+  </div>
+
+  <div
+    style={{
+      background: "#f8fafc",
+      border: "1px solid #e2e8f0",
+      borderRadius: "12px",
+      padding: "18px",
+      textAlign: "center",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "12px",
+        color: "#64748b",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+      }}
+    >
+      Issuer
+    </div>
+
+    <div
+      style={{
+        marginTop: "8px",
+        fontWeight: 700,
+      }}
+    >
+      LearnLift Digital
+    </div>
+  </div>
+</div>
         <div
           style={{
             border: "1px solid #e2e8f0",
@@ -258,6 +399,10 @@ export default async function VerifyPage({
             label="Program"
             value={credential.program}
           />
+          <CredentialRow
+  label="Language"
+  value="Oromo"
+/>
 
           <CredentialRow
             label="Credential Type"
@@ -270,9 +415,13 @@ export default async function VerifyPage({
           />
 
           <CredentialRow
-            label="Credential ID"
-            value={credential.id}
-          />
+  label="Certificate ID"
+  value={credential.id}
+/>
+<CredentialRow
+  label="Verification URL"
+  value={`learnliftdigital.com/verify/${credential.id}`}
+/>
 
           <CredentialRow
             label="Issued By"
@@ -296,6 +445,30 @@ export default async function VerifyPage({
           </strong>
         </div>
 
+<div
+  style={{
+    textAlign: "center",
+    marginTop: "30px",
+  }}
+>
+  <a
+    href={`/certificate/${credential.id}`}
+    target="_blank"
+    style={{
+      display: "inline-block",
+      padding: "14px 32px",
+      background: "#1557ff",
+      color: "#ffffff",
+      textDecoration: "none",
+      borderRadius: "10px",
+      fontWeight: 700,
+      fontSize: "15px",
+      boxShadow: "0 6px 18px rgba(21,87,255,0.25)",
+    }}
+  >
+    📄 View Certificate
+  </a>
+</div>
         <Footer />
       </div>
     </main>
@@ -305,25 +478,24 @@ export default async function VerifyPage({
 function Brand() {
   return (
     <div style={{ textAlign: "center" }}>
-      <div
+      <img
+        src="/learnlift-logo.png"
+        alt="LearnLift Digital"
         style={{
-          fontSize: "30px",
-          fontWeight: 800,
-          color: "#071126",
+          width: "180px",
+          marginBottom: "18px",
         }}
-      >
-        <span style={{ color: "#1557ff" }}>LearnLift</span> Digital
-      </div>
+      />
 
       <div
         style={{
-          marginTop: "8px",
           color: "#64748b",
-          fontSize: "12px",
+          fontSize: "13px",
           letterSpacing: "3px",
+          textTransform: "uppercase",
         }}
       >
-        LEARN. BUILD. LIFT.
+        Official Credential Verification Portal
       </div>
     </div>
   );
@@ -382,7 +554,7 @@ function Footer() {
         fontSize: "12px",
       }}
     >
-      LearnLift Digital · www.learnliftdigital.com
+      © 2026 LearnLift Digital • Official Credential Verification Portal
     </div>
   );
 }

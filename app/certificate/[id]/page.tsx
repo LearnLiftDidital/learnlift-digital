@@ -92,38 +92,52 @@ export default async function CertificatePage({
             textAlign: "center",
           }}
         >
-          {/* BRAND */}
-          <div
-            style={{
-              fontSize: "31px",
-              fontWeight: 800,
-              letterSpacing: "-1px",
-              marginBottom: "10px",
-              color: "#071126",
-            }}
-          >
-            <span style={{ color: "#1557ff" }}>LearnLift</span> Digital
-          </div>
+         {/* BRAND */}
+<div style={{ marginBottom: "18px" }}>
+  <img
+    src="/learnlift-logo.png"
+    alt="LearnLift Digital"
+    style={{
+      width: "180px",
+      display: "block",
+      margin: "0 auto 18px",
+    }}
+  />
 
-          <div
-            style={{
-              color: "#64748b",
-              fontSize: "14px",
-              letterSpacing: "4px",
-              textTransform: "uppercase",
-            }}
-          >
-            Learn. Build. Lift.
-          </div>
+  <div
+    style={{
+      fontSize: "36px",
+      fontWeight: 800,
+      color: "#071126",
+      letterSpacing: "-1px",
+      lineHeight: 1,
+    }}
+  >
+    <span style={{ color: "#1557ff" }}>LearnLift</span> Digital
+  </div>
 
-          <div
-            style={{
-              width: "66px",
-              height: "2px",
-              background: "#1557ff",
-              margin: "25px auto 30px",
-            }}
-          />
+  <div
+    style={{
+      color: "#64748b",
+      fontSize: "13px",
+      letterSpacing: "5px",
+      marginTop: "14px",
+      textTransform: "uppercase",
+    }}
+  >
+    Learn. Build. Lift.
+  </div>
+
+  <div
+    style={{
+      width: "95px",
+      height: "3px",
+      background: "#d4af37",
+      borderRadius: "20px",
+      margin: "24px auto 34px",
+    }}
+  />
+</div>
 
           {/* CATEGORY */}
           <div
@@ -136,11 +150,9 @@ export default async function CertificatePage({
               marginBottom: "20px",
             }}
           >
-            {credential.category === "ai"
-              ? "AI & Technology Credential"
-              : credential.category === "digital"
-                ? "Digital Skills Credential"
-                : "Professional Training Credential"}
+            {credential.category === "language"
+  ? "LANGUAGE PROFICIENCY CREDENTIAL"
+  : "LEARNLIFT DIGITAL CREDENTIAL"}
           </div>
 
           {/* CERTIFICATE TYPE */}
@@ -149,7 +161,7 @@ export default async function CertificatePage({
               margin: 0,
               color: "#101827",
               fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "52px",
+              fontSize: "46px",
               fontWeight: 400,
               lineHeight: 1.1,
             }}
@@ -166,7 +178,7 @@ export default async function CertificatePage({
               fontSize: "17px",
             }}
           >
-            This certificate is proudly presented to
+            This certifies that
           </p>
 
           {/* LEARNER NAME — AUTOMATIC */}
@@ -174,7 +186,7 @@ export default async function CertificatePage({
             style={{
               color: "#1557ff",
               fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "42px",
+              fontSize: "54px",
               fontWeight: 700,
               marginBottom: "15px",
             }}
@@ -199,20 +211,28 @@ export default async function CertificatePage({
               fontSize: "17px",
             }}
           >
-            for successfully completing the requirements of the
+            has successfully demonstrated professional proficiency in the Oromo language through the LearnLift Digital Language Proficiency Assessment.
           </p>
 
           {/* PROGRAM — AUTOMATIC */}
           <div
-            style={{
-              color: "#071126",
-              fontSize: "27px",
-              fontWeight: 600,
-              marginBottom: "14px",
-            }}
-          >
-            {credential.program}
-          </div>
+  style={{
+    marginBottom: "28px",
+    textAlign: "center",
+  }}
+>
+  <div
+    style={{
+      color: "#64748b",
+      fontSize: "13px",
+      letterSpacing: "2px",
+      textTransform: "uppercase",
+      marginBottom: "8px",
+    }}
+  >
+
+  </div>
+</div>
 
           <p
             style={{
@@ -223,8 +243,8 @@ export default async function CertificatePage({
               lineHeight: 1.6,
             }}
           >
-            demonstrating commitment to professional development and
-            competency in the program learning objectives.
+            This credential is digitally verifiable and confirms successful completion of the LearnLift Digital Language Proficiency Assessment. Its authenticity can be verified using the QR code or Certificate ID below.
+  
           </p>
 
           {/* DETAILS */}
@@ -263,42 +283,33 @@ export default async function CertificatePage({
               </div>
             </div>
 
-            {/* SIGNATURE */}
-            <div>
-              <img
-                src="/signature.png"
-                alt="Authorized signature"
-                style={{
-                  width: "175px",
-                  height: "65px",
-                  objectFit: "contain",
-                  display: "block",
-                  margin: "0 auto 3px",
-                }}
-              />
+           {/* AUTHORIZATION */}
+<div>
+  
 
-              <div
-                style={{
-                  borderTop: "1px solid #94a3b8",
-                  paddingTop: "8px",
-                  fontWeight: 700,
-                  color: "#071126",
-                  fontSize: "14px",
-                }}
-              >
-                Kahiye Moulid Hassan
-              </div>
+  <div
+    style={{
+      fontWeight: 800,
+      color: "#071126",
+      fontSize: "22px",
+    }}
+  >
+    Joseph Parmuat
+  </div>
 
-              <div
-                style={{
-                  color: "#64748b",
-                  fontSize: "11px",
-                  marginTop: "4px",
-                }}
-              >
-                Founder, LearnLift Digital
-              </div>
-            </div>
+  <div
+    style={{
+      color: "#64748b",
+      fontSize: "13px",
+      marginTop: "6px",
+      lineHeight: 1.6,
+    }}
+  >
+    Chief Executive Officer
+    <br />
+    LearnLift Digital
+  </div>
+</div>
 
             {/* QR + UNIQUE ID */}
             <div>
