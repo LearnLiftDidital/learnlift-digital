@@ -1,7 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { supabase } from "../lib/supabase";
+import { useState, type FormEvent } from "react";
 import {
   ArrowRight,
   CheckCircle2,
@@ -45,51 +44,8 @@ export default function TalentPage() {
   const [submitted, setSubmitted] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
   event.preventDefault();
-
-  const form = event.currentTarget;
-  const formData = new FormData(form);
-
-  const skills = formData.getAll("skills") as string[];
-
-  const { error } = await supabase
-    .from("talent_profiles")
-    .insert({
-      full_name: formData.get("fullName") as string,
-      email: formData.get("email") as string,
-      phone: formData.get("phone") as string,
-      location: formData.get("location") as string,
-
-      primary_language: formData.get("primaryLanguage") as string,
-      other_languages: formData.get("otherLanguages") as string,
-      language_experience: formData.get("languageLevel") as string,
-
-      skills,
-
-      experience: formData.get("experience") as string,
-      expertise: formData.get("expertise") as string,
-      certifications: formData.get("certifications") as string,
-
-      linkedin: formData.get("linkedin") as string,
-      engagement: formData.get("engagement") as string,
-      availability: formData.get("availability") as string,
-
-      additional: formData.get("additional") as string,
-    });
-
-  if (error) {
-  console.error("Supabase error:", {
-    message: error.message,
-    details: error.details,
-    hint: error.hint,
-    code: error.code,
-  });
-
-  alert(`Submission failed: ${error.message}`);
-  return;
-}
-
   setSubmitted(true);
 }
 
