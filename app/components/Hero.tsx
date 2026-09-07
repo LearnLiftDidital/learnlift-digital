@@ -3,24 +3,24 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Award,
-  BriefcaseBusiness,
+  Bot,
   CheckCircle2,
   Globe2,
-  GraduationCap,
-  Laptop,
+  Languages,
+  Network,
   Sparkles,
-  TrendingUp,
+  Users,
+  Workflow,
 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#f8fbff]">
-      {/* Background decorations */}
+    <section className="relative overflow-hidden bg-[#f8fbff]">
+      {/* Background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 top-10 h-[500px] w-[500px] rounded-full bg-blue-200/30 blur-[120px]" />
-        <div className="absolute -right-32 top-32 h-[520px] w-[520px] rounded-full bg-cyan-200/30 blur-[130px]" />
-        <div className="absolute bottom-[-250px] left-1/3 h-[500px] w-[500px] rounded-full bg-indigo-200/20 blur-[120px]" />
+        <div className="absolute -left-40 top-0 h-[520px] w-[520px] rounded-full bg-blue-200/30 blur-[130px]" />
+        <div className="absolute -right-40 top-20 h-[560px] w-[560px] rounded-full bg-cyan-200/25 blur-[140px]" />
+        <div className="absolute bottom-[-260px] left-1/3 h-[520px] w-[520px] rounded-full bg-indigo-200/20 blur-[130px]" />
 
         <div
           className="absolute inset-0 opacity-[0.025]"
@@ -33,61 +33,61 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-20">
-        {/* LEFT SIDE */}
+        {/* =========================================================
+            LEFT CONTENT
+        ========================================================== */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="relative z-10"
         >
-          {/* Badge */}
+          {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm backdrop-blur"
           >
             <Sparkles className="h-4 w-4" />
-            Skills that open doors. Opportunities that change lives.
+            Global B2B AI, Language & Digital Solutions
           </motion.div>
 
-          {/* Headline */}
-          <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-[-0.04em] text-slate-950 sm:text-6xl lg:text-7xl xl:text-[78px]">
-            Learn skills.
-            <br />
-            Build your future.
+          {/* Main headline */}
+          <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.03] tracking-[-0.045em] text-slate-950 sm:text-6xl lg:text-7xl xl:text-[76px]">
+            Build smarter.
             <br />
             <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              Lift your potential.
+              Scale globally.
             </span>
           </h1>
 
-          {/* Description */}
+          {/* Main description */}
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-            LearnLift Digital helps ambitious learners build practical digital
-            skills, earn valuable certifications, and prepare for careers in a
-            world shaped by technology.
+            LearnLift Digital provides AI, language, digital and outsourced
+            workforce solutions to organizations worldwide, delivered through
+            a diverse network of qualified global talent.
           </p>
 
-          {/* Buttons */}
+          {/* CTAs */}
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <motion.a
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.98 }}
-              href="#learning-paths"
-              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-700 px-7 py-4 text-base font-bold text-white shadow-[0_14px_35px_rgba(29,78,216,0.25)] transition hover:bg-blue-800"
+              href="#request-demo"
+              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-700 px-7 py-4 text-base font-bold text-white shadow-[0_16px_38px_rgba(29,78,216,0.25)] transition hover:bg-blue-800"
             >
-              Explore Learning Paths
+              Request a Demo
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </motion.a>
 
             <motion.a
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.98 }}
-              href="#how-it-works"
+              href="#services"
               className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white/80 px-7 py-4 text-base font-bold text-slate-800 shadow-sm backdrop-blur transition hover:border-blue-300 hover:bg-white hover:text-blue-700"
             >
-              See How It Works
+              Explore Services
             </motion.a>
           </div>
 
@@ -95,60 +95,62 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-600">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-blue-600" />
-              Practical skills
+              Global delivery
             </div>
 
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-blue-600" />
-              Career-focused learning
+              Qualified talent
             </div>
 
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-blue-600" />
-              Accessible opportunities
+              Scalable teams
             </div>
           </div>
 
-          {/* Mini stats */}
+          {/* Capability stats */}
           <div className="mt-12 grid max-w-xl grid-cols-3 divide-x divide-slate-200 border-t border-slate-200 pt-7">
             <div className="pr-5">
               <p className="text-2xl font-extrabold text-slate-950 sm:text-3xl">
-                100%
+                AI
               </p>
               <p className="mt-1 text-xs font-medium text-slate-500 sm:text-sm">
-                Digital-first
+                Solutions
               </p>
             </div>
 
             <div className="px-5">
               <p className="text-2xl font-extrabold text-slate-950 sm:text-3xl">
-                Global
+                50+
               </p>
               <p className="mt-1 text-xs font-medium text-slate-500 sm:text-sm">
-                Career outlook
+                Languages
               </p>
             </div>
 
             <div className="pl-5">
               <p className="text-2xl font-extrabold text-slate-950 sm:text-3xl">
-                Future
+                Global
               </p>
               <p className="mt-1 text-xs font-medium text-slate-500 sm:text-sm">
-                Ready skills
+                Talent Network
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE */}
+        {/* =========================================================
+            RIGHT-SIDE B2B VISUAL
+        ========================================================== */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15 }}
           className="relative mx-auto hidden h-[620px] w-full max-w-[590px] lg:block"
         >
-          {/* Main glow */}
-          <div className="absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-blue-300/40 to-cyan-200/30 blur-[70px]" />
+          {/* Glow */}
+          <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-blue-300/40 to-cyan-200/30 blur-[75px]" />
 
           {/* Main dashboard */}
           <motion.div
@@ -158,106 +160,118 @@ export default function Hero() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute left-1/2 top-1/2 w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-[32px] border border-white/80 bg-white/90 p-6 shadow-[0_35px_80px_rgba(15,23,42,0.15)] backdrop-blur-xl"
+            className="absolute left-1/2 top-1/2 w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-[32px] border border-white/80 bg-white/95 p-6 shadow-[0_35px_90px_rgba(15,23,42,0.15)] backdrop-blur-xl"
           >
-            {/* Dashboard top */}
+            {/* Dashboard header */}
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">
-                  Your journey
+                  LearnLift Digital
                 </p>
+
                 <h3 className="mt-1 text-xl font-extrabold text-slate-950">
-                  Build skills that matter
+                  One partner. Multiple solutions.
                 </h3>
               </div>
 
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-lg shadow-blue-200">
-                <TrendingUp className="h-5 w-5" />
+                <Globe2 className="h-5 w-5" />
               </div>
             </div>
 
-            {/* Progress */}
-            <div className="mt-7 rounded-2xl bg-slate-50 p-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold text-slate-700">
-                  Career readiness
-                </span>
-                <span className="text-sm font-extrabold text-blue-700">
-                  78%
-                </span>
-              </div>
-
-              <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-slate-200">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "78%" }}
-                  transition={{ duration: 1.5, delay: 0.8 }}
-                  className="h-full rounded-full bg-gradient-to-r from-blue-700 to-cyan-500"
-                />
-              </div>
-            </div>
-
-            {/* Learning cards */}
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              <div className="rounded-2xl border border-blue-100 bg-blue-50/70 p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-white">
-                  <Laptop className="h-5 w-5" />
+            {/* AI */}
+            <div className="mt-7 rounded-2xl border border-blue-100 bg-blue-50/70 p-4">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-700 text-white">
+                  <Bot className="h-5 w-5" />
                 </div>
 
-                <p className="mt-4 text-sm font-extrabold text-slate-900">
-                  Digital Skills
-                </p>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm font-extrabold text-slate-900">
+                      AI Solutions
+                    </p>
 
-                <p className="mt-1 text-xs leading-5 text-slate-500">
-                  Build practical, job-ready capabilities.
-                </p>
-              </div>
+                    <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700">
+                      Core
+                    </span>
+                  </div>
 
-              <div className="rounded-2xl border border-cyan-100 bg-cyan-50/70 p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-600 text-white">
-                  <GraduationCap className="h-5 w-5" />
+                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                    AI automation, data services, evaluation, testing,
+                    annotation and human-in-the-loop solutions.
+                  </p>
                 </div>
-
-                <p className="mt-4 text-sm font-extrabold text-slate-900">
-                  Certifications
-                </p>
-
-                <p className="mt-1 text-xs leading-5 text-slate-500">
-                  Strengthen your professional profile.
-                </p>
               </div>
             </div>
 
-            {/* Opportunity card */}
-            <div className="mt-4 flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white">
-                <BriefcaseBusiness className="h-5 w-5" />
+            {/* Language */}
+            <div className="mt-3 rounded-2xl border border-cyan-100 bg-cyan-50/70 p-4">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-600 text-white">
+                  <Languages className="h-5 w-5" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-extrabold text-slate-900">
+                    Language & Linguistic
+                  </p>
+
+                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                    Translation, interpretation, localization, transcription,
+                    MTPE, linguistic QA and multilingual data.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Digital / BPO */}
+            <div className="mt-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white">
+                  <Workflow className="h-5 w-5" />
+                </div>
+
+                <div>
+                  <p className="text-sm font-extrabold text-slate-900">
+                    Digital & BPO
+                  </p>
+
+                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                    Digital operations, research, data processing, back-office
+                    support and managed outsourced teams.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Workforce footer */}
+            <div className="mt-5 flex items-center gap-3 rounded-2xl bg-slate-950 p-4 text-white">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                <Network className="h-5 w-5" />
               </div>
 
-              <div className="flex-1">
-                <p className="text-sm font-bold text-slate-900">
-                  Career pathways
+              <div>
+                <p className="text-xs font-medium text-slate-400">
+                  Talent infrastructure
                 </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  Turn learning into real opportunities.
+
+                <p className="text-sm font-extrabold">
+                  Verified global professionals
                 </p>
               </div>
-
-              <ArrowRight className="h-5 w-5 text-blue-600" />
             </div>
           </motion.div>
 
-          {/* Floating card - Global Opportunities */}
+          {/* Global talent floating card */}
           <motion.div
-            animate={{
-              y: [0, -10, 0],
-            }}
+            animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute right-[-45px] top-[35px] z-20 flex items-center gap-3 rounded-2xl border border-white bg-white/95 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur"
+            className="absolute right-[-42px] top-[35px] z-20 flex items-center gap-3 rounded-2xl border border-white bg-white/95 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur"
           >
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
               <Globe2 className="h-5 w-5" />
@@ -265,41 +279,41 @@ export default function Hero() {
 
             <div>
               <p className="text-xs font-medium text-slate-500">
-                Think beyond borders
+                Talent network
               </p>
+
               <p className="text-sm font-extrabold text-slate-900">
-                Global opportunities
+                Global & diverse
               </p>
             </div>
           </motion.div>
 
-          {/* Floating card - Professional Growth */}
+          {/* Languages floating card */}
           <motion.div
-            animate={{
-              y: [0, 10, 0],
-            }}
+            animate={{ y: [0, 10, 0] }}
             transition={{
               duration: 5.5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute bottom-[25px] left-[-65px] z-20 flex items-center gap-3 rounded-2xl border border-white bg-white/95 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur"
+            className="absolute bottom-[30px] left-[-58px] z-20 flex items-center gap-3 rounded-2xl border border-white bg-white/95 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
-              <Award className="h-5 w-5" />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
+              <Languages className="h-5 w-5" />
             </div>
 
             <div>
               <p className="text-xs font-medium text-slate-500">
-                Build credibility
+                Linguistic capability
               </p>
+
               <p className="text-sm font-extrabold text-slate-900">
-                Professional growth
+                50+ languages
               </p>
             </div>
           </motion.div>
 
-          {/* Decorative circles */}
+          {/* Decorative dots */}
           <motion.div
             animate={{ scale: [1, 1.15, 1] }}
             transition={{
@@ -318,6 +332,16 @@ export default function Hero() {
               ease: "easeInOut",
             }}
             className="absolute right-6 top-1/2 h-3 w-3 rounded-full bg-cyan-400"
+          />
+
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{
+              duration: 4.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute left-10 top-20 h-2.5 w-2.5 rounded-full bg-blue-400"
           />
         </motion.div>
       </div>

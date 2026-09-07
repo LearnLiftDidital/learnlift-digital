@@ -1,6 +1,7 @@
 import { getCredentialById } from "../../data/credentials";
 import { notFound } from "next/navigation";
 import { QRCodeSVG } from "qrcode.react";
+import DownloadButton from "../../components/DownloadButton";
 
 type CertificatePageProps = {
   params: Promise<{
@@ -352,7 +353,15 @@ export default async function CertificatePage({
               </div>
             </div>
           </div>
-
+<div
+  style={{
+    marginTop: "35px",
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <DownloadButton />
+</div>
           {/* FOOTER */}
           <div
             style={{

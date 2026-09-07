@@ -5,11 +5,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Learning Paths", href: "#learning-paths" },
-  { name: "Why LearnLift", href: "#about" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Outcomes", href: "#outcomes" },
+  { name: "Services", href: "#services" },
+  { name: "Solutions", href: "#solutions" },
+  { name: "Talent Network", href: "#talent" },
+  { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -35,13 +34,13 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop navigation */}
-        <div className="hidden items-center gap-7 lg:flex">
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="relative text-sm font-semibold text-slate-600 transition hover:text-blue-700"
+              className="text-sm font-semibold text-slate-600 transition hover:text-blue-700"
             >
               {link.name}
             </a>
@@ -51,20 +50,22 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <a
-            href="#learning-paths"
+            href="#contact"
             className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:-translate-y-0.5 hover:bg-blue-800"
           >
-            Explore Programs
+            Request a Demo
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setMenuOpen((current) => !current)}
           className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-800 shadow-sm transition hover:border-blue-200 hover:text-blue-700 lg:hidden"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
         >
           {menuOpen ? (
@@ -75,7 +76,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile navigation */}
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -107,17 +108,16 @@ export default function Navbar() {
 
               <div className="mt-5 border-t border-slate-200 pt-5">
                 <a
-                  href="#learning-paths"
+                  href="#contact"
                   onClick={() => setMenuOpen(false)}
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-700 px-5 py-4 font-bold text-white transition hover:bg-blue-800"
                 >
-                  Explore Programs
+                  Request a Demo
                   <ArrowRight className="h-5 w-5" />
                 </a>
 
                 <p className="mt-4 text-center text-xs leading-5 text-slate-500">
-                  Learn practical skills. Build your future. Lift your
-                  potential.
+                  AI • Language • Digital • BPO • Global Talent
                 </p>
               </div>
             </div>

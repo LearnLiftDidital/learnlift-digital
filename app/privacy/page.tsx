@@ -150,10 +150,10 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy or how we handle
                 information, contact LearnLift Digital at{" "}
                 <a
-                  href="mailto:contact.learnlift@gmail.com"
+                  href="mailto:info@learnliftdigital.com"
                   className="font-bold text-blue-700 hover:text-blue-800"
                 >
-                  contact.learnlift@gmail.com
+                  contact.info@learnliftdigital.com
                 </a>
                 .
               </p>
