@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:-translate-y-0.5 hover:bg-blue-800"
           >
             Request a Demo

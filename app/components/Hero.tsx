@@ -74,7 +74,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.98 }}
-              href="#request-demo"
+              href="/#contact"
               className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-700 px-7 py-4 text-base font-bold text-white shadow-[0_16px_38px_rgba(29,78,216,0.25)] transition hover:bg-blue-800"
             >
               Request a Demo
